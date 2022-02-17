@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [value , setValue] = useState()
+  const [name , setName] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <input type="text" onChange={(e) => setValue(e.target.value) } />
+      <button onClick={ () => setName( [...name,value] ) } > persone name : {value} </button>
+      <ul>
+        {name.map(el => <li>{el} { <button>suprimer</button> } </li> )}
+      </ul>
     </div>
   );
 }

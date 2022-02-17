@@ -5,9 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black ;
+  color: #fff ;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.searsh {
+  padding : 10px ;
+  font-size: 20px;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+tbody:first-child {
+  text-align: left ;
+} 
+
+table {
+  margin: auto;
+  width: 65%;
 }
